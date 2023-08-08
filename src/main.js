@@ -2,7 +2,10 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import Main from './Main.vue'
-
-createApp(Main).mount('#app')
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import Main from '@/util/Speak.vue'
+const app=createApp(Main)
+app.use(ElementPlus)
+app.mount('#app')
 
