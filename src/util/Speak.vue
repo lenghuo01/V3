@@ -10,6 +10,7 @@ export default{
 
 
        async function getanswer(){
+        answer.value='Thinking...'
         //获取数据
         const qingyunkeRes = await fetch(
         `http://124.223.90.239:8000/api/qingyunke?msg=${ques.value}`
