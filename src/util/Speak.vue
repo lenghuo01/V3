@@ -1,13 +1,18 @@
 <script>
 import {ref, watch}from 'vue'
+
 export default{
 
     name:'SpeakComp',
+   
     setup(){
         const ques=ref('')
         const answer=ref('')
         const gif=ref()
-
+        const form=ref({
+            name:'',
+            password:''
+        })
 
        async function getanswer(){
         answer.value='Thinking...'
@@ -40,11 +45,12 @@ export default{
         })
 
 
-        
+        console.log(form)
 return{
         ques,
         answer,
-        gif
+        gif,
+        form
     }
     }
 
@@ -58,4 +64,6 @@ return{
        <div >机械人：{{ answer }}</div>
       <img :src="gif" />
     </div>
+  
+
 </template>
