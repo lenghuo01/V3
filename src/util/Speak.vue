@@ -27,7 +27,7 @@ export default{
     
             if(ques.value.indexOf('？')  > -1){
              
-                answer.value='Thinking...'
+                
                 Promise.all([getanswer(),getGif()]).then(([resAnswer,resGif])=>{
                     answer.value=resAnswer
                     gif.value=resGif
