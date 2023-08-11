@@ -1,18 +1,26 @@
 <script>
 
 import{ref}from 'vue'
+import ShiJian from'@/component/shijian.vue'
 export default{
     name: 'StyleComp',
+    components:{
+        ShiJian,
+    },
     setup(){
         const ques=ref()
         let res=ref()
+        function dayin(data){
+            console.log(data)
+        }
         function bu(){
             res.value=ques.value
         }
         return{
             ques,
             res,
-            bu
+            bu,
+            dayin
         }
     }
 }
@@ -24,6 +32,10 @@ export default{
 
 
 </div>
+<shi-jian @submit="dayin">
+
+</shi-jian>
+
  
 </template>
 <style>
